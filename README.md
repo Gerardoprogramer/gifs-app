@@ -12,7 +12,7 @@ La app permite buscar y mostrar GIFs a través de la API de Giphy.
 
 ## 🚀 Demo en vivo
 
-👉 [Ver aplicación en Netlify](TU_LINK_DE_NETLIFY)
+👉 [Ver aplicación en Netlify](https://giphygmm.netlify.app/)
 
 ---
 
