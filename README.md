@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# Gifs-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Vite](https://img.shields.io/badge/Vite-Frontend-purple?logo=vite)
+![Vitest](https://img.shields.io/badge/Tests-Vitest-green?logo=vitest)
+![Netlify](https://img.shields.io/badge/Deployed-Netlify-brightgreen?logo=netlify)
 
-Currently, two official plugins are available:
+Mi primera aplicación en **React**, construida con **componentes funcionales**, **hooks personalizados** y **testing con Vitest**, desplegada en **Netlify**.  
+La app permite buscar y mostrar GIFs a través de la API de Giphy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Demo en vivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👉 [Ver aplicación en Netlify](TU_LINK_DE_NETLIFY)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📝 Descripción
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+La aplicación permite a los usuarios:
+
+- Buscar GIFs por palabra clave.
+- Mostrar resultados en tarjetas con animaciones.
+- Ver un historial de búsquedas recientes.
+- Manejo de estados de carga y errores.
+
+Este proyecto me sirvió para practicar:
+
+- **Componentes funcionales** en React.  
+- **Hooks personalizados** para encapsular y reutilizar lógica (por ejemplo: manejo de peticiones a la API y estado de la búsqueda).  
+- **Testing** con Vitest y configuración de coverage.  
+- **Consumo de APIs** externas y renderizado dinámico.  
+- **Despliegue** en Netlify.  
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+- [React](https://reactjs.org/) – Librería principal.  
+- [Vite](https://vitejs.dev/) – Entorno de desarrollo rápido.  
+- [Vitest](https://vitest.dev/) – Testing y coverage.  
+- [Netlify](https://www.netlify.com/) – Despliegue.  
+- [API de Giphy](https://developers.giphy.com/) – Fuente de los GIFs.  
+
+---
+
+## ⚙️ Instalación y uso
+
+Clona el repositorio e instala dependencias:
+
+```bash
+git clone https://github.com/Gerardoprogramer/gifs-app.git
+cd gifs-app
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Ejecutar los tests:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run test
 ```
+
+Generar reporte de cobertura:
+
+```bash
+npm run coverage
+```
+---
+## 🧪 Testing:
+
+- Se implementaron pruebas con Vitest.
+
+- Configuración de cobertura con @vitest/coverage-v8.
+
+- Tests en componentes principales y en los hooks personalizados (para asegurar la lógica de negocio).
+
+---
+
+## 💡 Mi experiencia
+
+Este fue mi primer proyecto en React. Aprendí a:
+
+- Crear hooks personalizados para simplificar y reutilizar lógica.
+
+- Usar componentes funcionales y separar responsabilidades.
+
+- Probar tanto componentes como hooks con Vitest.
+
+- Configurar y analizar la cobertura de código.
+
+- Desplegar una aplicación en Netlify.
+
+Retos superados:
+
+- Manejar peticiones asíncronas con hooks personalizados.
+
+- Configurar testing y coverage en un proyecto desde cero.
+
+- Organizar el código para que fuera escalable y legible.
+
+---
+
+## 📈 Estado del proyecto
+
+- ✅ Funcionalidad básica completada.
+
+- 🔜 Próximos pasos: mejorar diseño responsivo, añadir paginación y aumentar cobertura de pruebas.
